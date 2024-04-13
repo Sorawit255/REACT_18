@@ -15,6 +15,10 @@ export default function StudentList() {
   ]);
   // boolean T F
   const [show, setShow] = useState(true);
+
+  const btnStyle={
+    background: show? "purple" : "Green"
+  }
   return (
     <>
       <h1 style={{color:"Blue"}}>จำนวนเลข : {count}</h1>
@@ -35,7 +39,7 @@ export default function StudentList() {
           ))}
       </ul>
       {/* boolean */}
-      <button onClick={() => setShow(!show)}>สลับ</button>
+      <button onClick={() => setShow(!show)} style={btnStyle}>{show?"Hide":"Show"}</button>
     </>
   );
 }
