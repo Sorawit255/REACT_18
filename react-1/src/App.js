@@ -7,6 +7,11 @@ function App() {
     function addcount(){
       setCount(count+1); 
     }
+  // Array state 
+  const [students,setstudents] = useState([
+    {ID:1 , name:"Muragi"},
+    {ID:2 , name:"Rina"}
+  ])
   return (
     <>
       <h1>จำนวนเลข : {count}</h1>
@@ -14,6 +19,15 @@ function App() {
       {/* เขียนแบบ Arrow function ()=>...คำสั่ง... */}
       <button onClick={()=>setCount(count-1)}>Delete</button>
       <button onClick={()=>setCount(0)}>Reset</button>
+      {/* Array state */}
+      <h1>studentList = {students.length}</h1>
+      <ul>
+        {students.map((item)=>(
+          <li key={item.ID}>
+            <p>{item.ID} , {item.name}</p>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
