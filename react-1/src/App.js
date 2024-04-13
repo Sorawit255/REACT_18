@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
 
 function App() {
+  // create State
+  const [count,setCount] = useState(0);
+    function addcount(){
+      setCount(count+1); 
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>จำนวนเลข : {count}</h1>
+      <button onClick={addcount}>Add</button>
+      {/* เขียนแบบ Arrow function ()=>...คำสั่ง... */}
+      <button onClick={()=>setCount(count-1)}>Delete</button>
+      <button onClick={()=>setCount(0)}>Reset</button>
+    </>
   );
 }
 
