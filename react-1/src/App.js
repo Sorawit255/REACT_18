@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <Header/>
-      <StudentList/>
+      <body>
+        <StudentList/>
+      </body>
     </>
   );
 }
