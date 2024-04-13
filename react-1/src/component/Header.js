@@ -1,7 +1,12 @@
+import Logo from "../image/logo.png"
+
 // export default const Header=()=>{}
 export default function Header(){
     return(
-        <h1>Menu</h1>
+        <nav>
+            <img src={Logo} alt="logo"/>
+            <a href="/">หน้าแรก</a>
+        </nav>
     )
 }
 // export default Header;
