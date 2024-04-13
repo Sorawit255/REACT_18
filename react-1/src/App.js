@@ -5,12 +5,12 @@ import StudentList from './component/StudentList';
 function App() {
  
   return (
-    <>
+    <div className='App'>
       <Header/>
       <body>
         <StudentList/>
       </body>
-    </>
+    </div>
   );
 }
 

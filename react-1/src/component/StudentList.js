@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./StudentList.css";
 export default function StudentList() {
   // create State
   const [count, setCount] = useState(0);
