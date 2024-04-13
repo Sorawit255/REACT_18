@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+
+button {
+  background-color: gray;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 0%;
+  padding: auto;
+}
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+main{
+  min-height: 90vh;
+  max-width: 1200px;
+  margin: auto;
+}
