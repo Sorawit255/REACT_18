@@ -17,7 +17,7 @@ export default function StudentList() {
   const [show, setShow] = useState(true);
   return (
     <>
-      <h1>จำนวนเลข : {count}</h1>
+      <h1 style={{color:"Blue"}}>จำนวนเลข : {count}</h1>
       <button onClick={addcount}>Add</button>
       {/* เขียนแบบ Arrow function ()=>...คำสั่ง... */}
       <button onClick={() => setCount(count - 1)}>Delete</button>
