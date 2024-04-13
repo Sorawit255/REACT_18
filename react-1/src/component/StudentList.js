@@ -1,21 +1,15 @@
 import { useState } from "react";
 import "./StudentList.css";
-export default function StudentList() {
+import Item from "./Item";
+export default function StudentList(props) {
+  const{students}=props;
   // create State
   const [count, setCount] = useState(0);
   function addcount() {
     setCount(count + 1);
   }
-  // Array state
-  const [students, setstudents] = useState([
-    { ID: 1, name: "Muragi" },
-    { ID: 2, name: "Rina" },
-    { ID: 3, name: "Saegusa" },
-    { ID: 4, name: "Magumi" },
-  ]);
   // boolean T F
   const [show, setShow] = useState(true);
-
   const btnStyle={
     background: show? "purple" : "Green"
   }
@@ -30,12 +24,8 @@ export default function StudentList() {
       <h1>studentList = {students.length}</h1>
       <ul>
         {show &&
-          students.map((item) => (
-            <li key={item.ID}>
-              <p>
-                {item.ID} , {item.name}
-              </p>
-            </li>
+          students.map((data) => (
+            <Item key={data.ID} data={data} />
           ))}
       </ul>
       {/* boolean */}
