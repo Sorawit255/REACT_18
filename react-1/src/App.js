@@ -10,8 +10,12 @@ function App() {
   // Array state 
   const [students,setstudents] = useState([
     {ID:1 , name:"Muragi"},
-    {ID:2 , name:"Rina"}
+    {ID:2 , name:"Rina"},
+    {ID:3 , name:"Saegusa"},
+    {ID:4 , name:"Magumi"}
   ])
+  // boolean T F
+  const [show,setShow] = useState(true);
   return (
     <>
       <h1>จำนวนเลข : {count}</h1>
@@ -22,12 +26,14 @@ function App() {
       {/* Array state */}
       <h1>studentList = {students.length}</h1>
       <ul>
-        {students.map((item)=>(
+        {show && students.map((item)=>(
           <li key={item.ID}>
             <p>{item.ID} , {item.name}</p>
           </li>
         ))}
       </ul>
+      {/* boolean */}
+      <button onClick={()=>setShow(!show)}>สลับ</button>
     </>
   );
 }
