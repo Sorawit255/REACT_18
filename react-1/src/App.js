@@ -2,6 +2,7 @@
 import './App.css';
 import Header from "./component/Header";
 import StudentList from './component/StudentList';
+import AddForm from './component/Addform';
 import { useState } from "react";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className='App'>
       <Header/>
       <body>
+        <AddForm/>
         <StudentList students={students}/>
       </body>
     </div>
