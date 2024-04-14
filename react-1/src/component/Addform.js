@@ -16,6 +16,7 @@ export default function AddForm(props) {
             }
             setstudents([...students,newStudent])
             setname("")
+            setGender("male")
         }
     }
   return (
