@@ -1,19 +1,18 @@
 import "./Addform.css";
 import { useState } from "react";
-export default function AddForm() {
+export default function AddForm(props) {
+    const {students,setstudents}=props;
     const [name,setname]=useState("");
     function saveStudent(e){
         e.preventDefault();
-        console.log(name);
         if(!name){
             alert("ป้อนชื่อ!!")
-        }
-        else{
+        }else{
             const newStudent={
                 ID:Math.floor(Math.random()*1000),
                 name:name
             }
-            console.log(newStudent);
+            setstudents([...students,newStudent])
             setname("")
         }
     }

@@ -18,7 +18,7 @@ function App() {
     <div className='App'>
       <Header/>
       <body>
-        <AddForm/>
+        <AddForm students={students} setstudents={setstudents}/>
         <StudentList students={students}/>
       </body>
     </div>
