@@ -4,9 +4,7 @@ import AddForm from './components/AddForm';
 import Item from './components/Item';
 import {useState,useEffect } from "react";
 function App() {
-  const [tasks,setTasks]=useState([
-    {id:1,title:"sdgsdg"},
-  ])
+  const [tasks,setTasks]=useState([])
   const [title,setTitle]=useState("")
   const [editId,setEditId] = useState(null);
   const [theme,setTheme] = useState("light");
