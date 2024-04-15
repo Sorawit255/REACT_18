@@ -9,6 +9,7 @@ function App() {
   ])
   const [title,setTitle]=useState("")
   const [editId,setEditId] = useState(null);
+  const [theme,setTheme] = useState("light");
   //รูปแบบ 3
   useEffect(()=>{
     localStorage.setItem("tasks",JSON.stringify(tasks))
@@ -53,7 +54,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Header/>
+      <Header theme={theme} setTheme={setTheme}/>
       <div className="container">
         <AddForm title={title} setTitle={setTitle} saveTask={saveTask} editId={editId}/>
         <section>

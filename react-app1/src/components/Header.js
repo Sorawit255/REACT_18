@@ -1,12 +1,13 @@
 import "./Header.css"
-export default function Header(){
+export default function Header(props){
+    const {theme,setTheme} = props;
     return(
         <header>
             <div className="Logo">
                 <span>Task Managemet</span>
             </div>
             <div className="theme-container">
-                <span>โหมดกลางคืน</span>
+                <span>{theme === "light" ? "โหมดกลางวัน" : "โหมดกลางคืน"}</span>
                 <span className="icon">สลับ</span>
             </div>
         </header>
