@@ -1,4 +1,5 @@
 import "./Header.css"
+import { IoSunny,IoMoon } from "react-icons/io5";
 export default function Header(props){
     const {theme,setTheme} = props;
     function ToggleTheme(){
@@ -15,7 +16,9 @@ export default function Header(props){
             </div>
             <div className="theme-container">
                 <span>{theme === "light" ? "โหมดกลางวัน" : "โหมดกลางคืน"}</span>
-                <span className="icon" onClick={ToggleTheme}>สลับ</span>
+                <span className="icon" onClick={ToggleTheme}>
+                    {theme==="light"? <IoSunny/> :<IoMoon/>}
+                </span>
             </div>
         </header>
     )
