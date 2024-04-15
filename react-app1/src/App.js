@@ -25,6 +25,19 @@ function App() {
     if(!title){
       alert("กรุณาป้อนข้อมูลด้วยครับ")
     }
+    else if(editId){
+      //อัพเดตข้อมูล
+      const updateTask = tasks.map((item)=>{
+        //รายการใดมีรหัสตรงกับรหัสแก้ไข
+          if(item.id === editId){
+              return {...item,title:title}
+          }
+          return item;
+      })
+      setTasks(updateTask)
+      setEditId(null)
+      setTitle("")
+    }
     else{
       //เพิ่มรายการใหม่
       const newTask={
