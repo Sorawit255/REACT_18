@@ -7,15 +7,16 @@ function App() {
   const [tasks,setTasks]=useState([
     {id:1,title:"sdgsdg"}
   ])
+  const [title,setTitle]=useState("")
   function deleteTask(id){
-    const result = tasks.filter(item=>item.id !=id)
+    const result = tasks.filter(item=>item.id !==id)
     setTasks(result)
   }
   return (
     <div className="App">
       <Header/>
       <div className="container">
-        <AddForm/>
+        <AddForm title={title} setTitle={setTitle}/>
         <section>
           {
             tasks.map((data)=>(
