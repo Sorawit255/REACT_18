@@ -12,6 +12,7 @@ import { BrowserRouter,Routes,Route ,Navigate} from "react-router-dom";function 
           <Route path="/about" element={<About/>}></Route>
           <Route path="/blogs" element={<Blogs/>}></Route>
           <Route path="*" element={<NotFound/>}></Route>
+          <Route path="/home" element={<Navigate to="/"/>}></Route>
       </Routes>
     </BrowserRouter>
   );
