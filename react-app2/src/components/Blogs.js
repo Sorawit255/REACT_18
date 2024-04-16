@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 export default function Blogs() {
   const [search, setSearch] = useState("");
+  const [filterBlog,setFilterBlog] = useState([])
+  useEffect(()=>{
+    //กรองชื่อข้อมูลบทความ
+    const result = blogs.filter((item=>item.title.includes(search)))
+    setFilterBlog(result)
+  },[search])
   return (
     <div className="blogs-container">
       <div className="search-container">
@@ -16,7 +22,7 @@ export default function Blogs() {
         />
       </div>
       <article>
-        {blogs.map((item) => (
+        {filterBlog.map((item) => (
           <Link to={`/blog/${item.id}`} key={item.id}>
               <div className="card">
               <h2>{item.title}</h2>
