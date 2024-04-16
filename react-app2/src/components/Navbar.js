@@ -5,8 +5,8 @@ export default function Navber(){
         <nav>
             <Link to="/" className="logo"><h3>Blogs Application</h3></Link>
             <Link to="/">หน้าแรก</Link>
-            <Link to="/about">เกี่ยวกับเรา</Link>
             <Link to="/blogs">บทความทั้งหมด</Link>
+            <Link to="/about">เกี่ยวกับเรา</Link>
         </nav>
     )
 }
