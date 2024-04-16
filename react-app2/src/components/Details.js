@@ -14,10 +14,16 @@ export default function Details(){
         setImage(result.image_url)
         setContent(result.content)
         setAuthor(result.author)
-    })
+        // eslint-disable-next-line
+    },[])
     return(
        <div className="container">
-            <h2 className="title">บทความ : {id}</h2>
+            <h2 className="title">บทความ : {title}</h2>
+            <img src={image} alt={title}></img>
+            <div>
+                <strong>ผู้เขียน : {author}</strong>
+                <p>{content}</p>
+            </div>
        </div>
     )
 }
